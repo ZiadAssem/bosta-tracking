@@ -5,5 +5,13 @@
     "contact sales" : "Contact Sales",
     "login": "Login",
     "track shipment": "Track Shipment",
-    "language": "عربي"
+    "language": "عربي",
+    "welcome" : "Welcome to",
+    "first shipment": " Track Your First Shipment",
+
+    "shipment number": "Shipment Number",
+    "DELIVERED_TO_SENDER": "Delivery Successful",
+    "LAST_UPDATE": "Last Update"
+    
+
 }

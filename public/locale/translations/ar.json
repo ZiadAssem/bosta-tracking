@@ -5,5 +5,11 @@
     "contact sales" : "كلم المبيعات",
     "login": "تسجيل الدخول",
     "track shipment": "تتبع شحنتك",
-    "language": "ENG"
+    "language": "ENG",
+    "welcome" : "أهلا بيك في",
+    "first shipment": "تتبع شحنتك الأولي",
+
+    "shipment number": "رقم الشحنة",
+    "DELIVERED_TO_SENDER": "تم تسليم الشحنة",
+    "LAST_UPDATE": "آخر تحديث"
 }
