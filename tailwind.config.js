@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#e20713",
+        secondary: "#1f2937"
+      },
       fontFamily: {
         cairo: ['Cairo', 'sans-serif'],
       },

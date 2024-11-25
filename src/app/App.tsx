@@ -1,16 +1,20 @@
 import React from 'react';
 import logo from './../assets/images/logo.svg';
 import './../App.css';
-import { initReactI18next, useTranslation } from 'react-i18next';
+import {  useTranslation } from 'react-i18next';
 import './utils/il8n';
+import NavBar from './components/nav_bar';
+import LanguageContextProvider from './context/language_context';
 
 
 
 function App() {
   const {t} = useTranslation();
   return (
-    <div className="App ">
-      <header className="App-header">
+   <LanguageContextProvider>
+     <div className='  bg-white px-20 py-4' >
+        <NavBar />
+        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -23,8 +27,8 @@ function App() {
         >
          { t("bosta")}
         </a>
-      </header>
     </div>
+   </LanguageContextProvider>
   );
 }
 
