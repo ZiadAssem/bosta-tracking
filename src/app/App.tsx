@@ -5,6 +5,7 @@ import {  useTranslation } from 'react-i18next';
 import './utils/il8n';
 import NavBar from './components/nav_bar';
 import LanguageContextProvider from './context/language_context';
+import Divider from './components/divider';
 
 
 
@@ -12,8 +13,9 @@ function App() {
   const {t} = useTranslation();
   return (
    <LanguageContextProvider>
-     <div className='  bg-white px-20 py-4' >
+     <div className='  bg-white ' >
         <NavBar />
+        <Divider/>
         
         <img src={logo} className="App-logo" alt="logo" />
         <p>
