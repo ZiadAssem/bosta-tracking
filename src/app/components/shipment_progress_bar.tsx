@@ -1,94 +1,62 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { CANCELLED_STATES, COMPLETED_STATES, DELIVERING, PENDING, PENDING_STATES } from "../constants/shipment_state";
 import { FaCheck } from "react-icons/fa6";
 import { LuPackageCheck } from "react-icons/lu";
 import { FaTruckFast } from "react-icons/fa6";
 import { FaSave } from "react-icons/fa";
 
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
-import { CANCELLED_STATES, PENDING_STATES } from "../constants/shipment_state";
-
-const ShipmentStates = {
-    TICKET_CREATED: "TICKET_CREATED",
-    PACKAGE_RECEIVED: "PACKAGE_RECEIVED",
-    IN_TRANSIT: "IN_TRANSIT",
-    OUT_FOR_DELIVERY: "OUT_FOR_DELIVERY",
-    DELIVERED: "DELIVERED",
-    CANCELLED: "CANCELLED",
-    DELIVERED_TO_SENDER: "DELIVERED_TO_SENDER",
-};
-
-const shipmentProgressMap = [
-    // { state: ShipmentStates.TICKET_CREATED, label: "Ticket Created" },
-    { state: ShipmentStates.IN_TRANSIT, label: "In Transit" },
-    { state: ShipmentStates.OUT_FOR_DELIVERY, label: "Out for Delivery" },
-    { state: ShipmentStates.DELIVERED, label: "Delivered" },
-];
-const shipmentIndicatorMap = [
-    { state: ShipmentStates.TICKET_CREATED, label: "Ticket Created" },
-    { state: ShipmentStates.IN_TRANSIT, label: "In Transit" },
-    { state: ShipmentStates.OUT_FOR_DELIVERY, label: "Out for Delivery" },
-    { state: ShipmentStates.DELIVERED, label: "Delivered" },
-];
-
-export const ShipmentProgressBar = () => {
+export const ProgressBar = () => {
     const { shipment } = useSelector((state: RootState) => state.shipment);
-
-    // Get the current shipment state
     const currentState = shipment?.currentStatus?.state;
+    const isCancelled = CANCELLED_STATES.includes(currentState!) ? 'bg-primary' : '';
+    const isPending = PENDING.includes(currentState!) ? 'bg-yellow-300' : 'bg-gray-300';
+    const isOutForDelivery = DELIVERING.includes(currentState!) ? 'bg-yellow-300' : 'bg-gray-300';
+    const isCompleted = COMPLETED_STATES.includes(currentState!) ? 'bg-green' : 'bg-gray-300';
 
-    // Determine the color based on state
-    const getStepColor = (stepState: string) => {
-        if (
-            (CANCELLED_STATES.includes(currentState!)) && stepState !== ShipmentStates.DELIVERED
-        ) {
-            return "bg-primary"; // Cancelled states
-        }
-        if (
-            PENDING_STATES.includes(currentState!) 
-        ){
-            return 'bg-yellow-300'
-        }
-        if (
-            shipmentProgressMap.findIndex((step) => step.state === stepState) <=
-            shipmentProgressMap.findIndex((step) => step.state === currentState)
-        ) {
-            return "bg-green"; // Completed or current state
-        }
-        return "bg-gray-300"; // Pending states
-    };
+    const step_1 = isCompleted || isPending || isOutForDelivery;
+    const step_2 = isCompleted || isOutForDelivery;
+    const step_3 = isCompleted;
+
 
     return (
         <div className="flex items-center w-full mt-5 p-5 justify-between">
-
-            {shipmentProgressMap.map((step, index) => (
-                <div key={step.state} className="flex items-center justify flex-1">
-                    {/* Step Icon */}
-                    <div
-                        className={`relative z-10 w-6 h-6 flex items-center justify-center rounded-full text-white ${getStepColor(
-                            step.state + 1
-                        )}`}
-                    >
-                        <FaCheck />
-                    </div>
-
-                    {/* Progress Line */}
-                    {index < shipmentProgressMap.length && (
-                        <div
-                            className={`h-1.5 flex-grow ${getStepColor(
-                                shipmentIndicatorMap[index + 1]?.state
-                            )}`}
-                            role="separator"
-                        >
-                        </div>
-                    )}
-
-                </div>
-            ))}
-            <div className={` ${getStepColor(ShipmentStates.DELIVERED)}  w-6 h-6 flex items-center justify-center rounded-full text-white `}
+            <div
+                className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full text-white ${step_1} ${isCancelled} 
+                    `}
             >
                 <FaCheck />
             </div>
-
+            <div
+                className={`h-2 flex-grow ${step_1} ${isCancelled} `}
+                role="separator"
+            >
+            </div>
+            <div
+                className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full text-white ${step_1} ${isCancelled}  `}>
+                {step_2 ? <FaCheck /> : <LuPackageCheck />}
+            </div>
+            <div
+                className={`h-2 flex-grow ${step_2} ${isCancelled} `}
+                role="separator"
+            >
+            </div>
+            <div
+                className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full text-white ${step_2}  ${isCancelled} 
+                    `}
+            >
+                {!step_3 ? <FaCheck /> : <FaTruckFast />}            </div>
+            <div
+                className={`h-2 flex-grow ${step_3}  `}
+                role="separator"
+            >
+            </div>
+            <div
+                className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full text-white ${step_3}  
+                    `}
+            >
+                {!step_3 ? <FaCheck /> : <FaSave />}
+            </div>
         </div>
-    );
-};
+    )
+}

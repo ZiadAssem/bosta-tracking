@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { ShipmentInfo } from './../models/shipment_info_model';
 import Divider from './divider';
-import { ShipmentProgressBar } from './shipment_progress_bar';
 import { CANCELLED_STATES, COMPLETED_STATES } from '../constants/shipment_state';
+import { ProgressBar } from './shipment_progress_bar';
 
 
 interface ShipmentHeadingProps {
@@ -54,7 +54,7 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
 
             </div>
             <Divider />
-            <ShipmentProgressBar />
+            <ProgressBar/>
 
             <div className="flex flex-row justify-between p-5">
                 <p className=' font-semibold text-lg'>{t("TICKET_CREATED")} </p>
