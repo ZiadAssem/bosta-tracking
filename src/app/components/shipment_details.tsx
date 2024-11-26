@@ -8,8 +8,8 @@ export const ShipmentDetails = () => {
 
 
     return (
-        <div className=" w-[65%] mt-10 ">
-            <p className="font-semibold">{t('SHIPMENT_DETAILS')}</p>
+        <div className=" min-w-[65%] mt-10 ">
+            <p className="font-semibold text-lg">{t('SHIPMENT_DETAILS')}</p>
             <div className="border rounded-lg mt-5">
                 {/* Header Row */}
 

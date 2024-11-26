@@ -55,9 +55,9 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
 
             <div className="flex flex-row justify-between p-5">
             <p className=' font-semibold text-lg'>{t("TICKET_CREATED")} </p>
-            <p className=' font-semibold text-lg'>{t("PARCEL_RECEIVED")} </p>
-            <p className=' font-semibold text-lg'>{t("PARCEL_OUT_FOR_DELIVERY")} </p>
-            <p className=' font-semibold text-lg'>{t("PARCEL_DELIVERED")} </p>
+            <p className=' font-semibold text-lg'>{t("PACKAGE_RECEIVED")} </p>
+            <p className=' font-semibold text-lg'>{t("PACKAGE_OUT_FOR_DELIVERY")} </p>
+            <p className=' font-semibold text-lg'>{t("PACKAGE_DELIVERED")} </p>
             
             </div>
 

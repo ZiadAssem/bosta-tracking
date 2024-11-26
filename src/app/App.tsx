@@ -11,6 +11,8 @@ import { fetchShipment } from './redux/shipment_slice';
 import { Welcome } from './components/welcome';
 import { ShipmentHeading } from './components/shipment_heading';
 import { ShipmentDetails } from './components/shipment_details';
+import { ShippingAddress } from './components/shipping_address';
+import { ReportProblem } from './components/report_problem';
 
 
 
@@ -44,8 +46,12 @@ function App() {
           {status == 'succeeded' && shipment &&
             <div className=' gap-10'>
               <ShipmentHeading shipment={shipment} />
-              <div className='flex-row gap-5'>
+              <div className='flex flex-row gap-5'>
                 <ShipmentDetails />
+                <div> 
+                  <ShippingAddress />
+                  <ReportProblem/>
+                </div>
               </div>
             </div>
           }

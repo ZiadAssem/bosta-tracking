@@ -17,10 +17,17 @@
     "LAST_UPDATE": "آخر تحديث",
     "PROVIDER": "اسم التاجر",
     "TICKET_CREATED": "تم إنشاء الشحنة",
-    "PARCEL_RECEIVED": "تم استلام الشحنة من التاجر",
-    "PARCEL_OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
-    "PARCEL_DELIVERED": "تم التسليم",
+    "PACKAGE_RECEIVED": "تم استلام الشحنة من التاجر",
+    "PACKAGE_OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
+    "PACKAGE_DELIVERED": "تم التسليم",
     "SHIPMENT_DETAILS": "تفاصيل الشحنة",
+    "IN_TRANSIT": "الشحنة في الطريق",
+    "DELIVERY_FAILED": "فشل التسليم",
+    "NOT_YET_SHIPPED": "الشحنة لم تتم بعد",
+    "SHIPPING_ADDRESS": "عنوان التسليم",
+
+    "PROBLEM": "هل يوجد مشكلة في شحنتك؟!",
+    "REPORT_PROBLEM": "إبلاغ عن مشكلة",
 
 
     "BRANCH": "الفرع",

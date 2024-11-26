@@ -18,10 +18,17 @@
     "LAST_UPDATE": "Last Update",
     "PROVIDER": "Provider",
     "TICKET_CREATED": "Ticket Created",
-    "PARCEL_RECEIVED": "Parcel Received From Provider",
-    "PARCEL_OUT_FOR_DELIVERY": "Parcel Out For Delivery",
-    "PARCEL_DELIVERED": "Parcel Delivered",
+    "PACKAGE_RECEIVED": "Package Received From Provider",
+    "PACKAGE_OUT_FOR_DELIVERY": "Parcel Out For Delivery",
+    "PACKAGE_DELIVERED": "Package Delivered",
     "SHIPMENT_DETAILS": "Shipment Details",
+    "IN_TRANSIT": "In Transit",
+    "DELIVERY_FAILED": "Delivery Failed",
+    "NOT_YET_SHIPPED": "Not Yet Shipped",
+    "SHIPPING_ADDRESS": "Shipping Address",
+
+    "PROBLEM": "Is there a problem with your shipment?!",
+    "REPORT_PROBLEM": "Report you problem",
     
 
 
