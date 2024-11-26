@@ -53,7 +53,15 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
             <Divider />
             <ShipmentProgressBar />
 
-            <h1>{shipment.currentStatus.state}</h1>
+            <div className="flex flex-row justify-between p-5">
+            <p className=' font-semibold text-lg'>{t("TICKET_CREATED")} </p>
+            <p className=' font-semibold text-lg'>{t("PARCEL_RECEIVED")} </p>
+            <p className=' font-semibold text-lg'>{t("PARCEL_OUT_FOR_DELIVERY")} </p>
+            <p className=' font-semibold text-lg'>{t("PARCEL_DELIVERED")} </p>
+            
+            </div>
+
+            
 
         </div>
     )

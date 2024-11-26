@@ -9,13 +9,26 @@
     "welcome" : "Welcome to",
     "first shipment": " Track Your First Shipment",
 
+
+    "DELIVERED": "Shipment Delivered",
+    "CANCELLED": "Shipment Cancelled",
     "PROMISED_DATE": "Estimated Delivery Date",
     "shipment number": "Shipment Number",
-    "DELIVERED_TO_SENDER": "Delivery Successful",
+    "DELIVERED_TO_SENDER": "Delivered To Sender",
     "LAST_UPDATE": "Last Update",
     "PROVIDER": "Provider",
+    "TICKET_CREATED": "Ticket Created",
+    "PARCEL_RECEIVED": "Parcel Received From Provider",
+    "PARCEL_OUT_FOR_DELIVERY": "Parcel Out For Delivery",
+    "PARCEL_DELIVERED": "Parcel Delivered",
+    "SHIPMENT_DETAILS": "Shipment Details",
+    
 
 
+    "BRANCH": "Branch",
+    "DATE": "Date",
+    "TIME": "Time",
+    "DETAILS": "Details",
 
 
     "Saturday": "Saturday",

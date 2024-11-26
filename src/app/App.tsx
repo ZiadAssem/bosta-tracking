@@ -10,6 +10,7 @@ import { AppDispatch, RootState, store } from './redux/store';
 import { fetchShipment } from './redux/shipment_slice';
 import { Welcome } from './components/welcome';
 import { ShipmentHeading } from './components/shipment_heading';
+import { ShipmentDetails } from './components/shipment_details';
 
 
 
@@ -22,31 +23,36 @@ function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    dispatch(fetchShipment("84043113"));
+    dispatch(fetchShipment("40106705"));
 
   }, [dispatch])
   return (
     <LanguageContextProvider>
-        <div className=' font-cairo bg-white ' >
-          <NavBar />
-          <Divider />
-          <div className='px-20'>
-          {status=='idle' &&
-            <Welcome/>
+      <div className=' font-cairo bg-white mb-10 ' >
+        <NavBar />
+        <Divider />
+        <div className='px-20'>
+          {status == 'idle' &&
+            <Welcome />
           }
-          {status=='loading' &&
+          {status == 'loading' &&
             <p>Loading...</p>
           }
-          {status=='failed' &&
+          {status == 'failed' &&
             <p>{error}</p>
           }
-          {status=='succeeded' && shipment &&
-            <ShipmentHeading shipment={shipment}/>
+          {status == 'succeeded' && shipment &&
+            <div className=' gap-10'>
+              <ShipmentHeading shipment={shipment} />
+              <div className='flex-row gap-5'>
+                <ShipmentDetails />
+              </div>
+            </div>
           }
-          
-          </div>
-       
+
         </div>
+
+      </div>
     </LanguageContextProvider>
   );
 }

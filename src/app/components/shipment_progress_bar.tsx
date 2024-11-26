@@ -41,6 +41,11 @@ export const ShipmentProgressBar = () => {
             return "bg-primary"; // Cancelled states
         }
         if (
+            currentState !== ShipmentStates.CANCELLED  && stepState !== ShipmentStates.DELIVERED
+        ){
+            return 'bg-yellow-300'
+        }
+        if (
             shipmentProgressMap.findIndex((step) => step.state === stepState) <=
             shipmentProgressMap.findIndex((step) => step.state === currentState)
         ) {

@@ -9,11 +9,24 @@
     "welcome" : "أهلا بيك في",
     "first shipment": "تتبع شحنتك الأولي",
 
+    "DELIVERED": "تم تسليم الشحنة",
+    "CANCELLED": "تم إلغاء الشحنة",
     "PROMISED_DATE": "موعد التسليم خلال",
     "shipment number": "رقم الشحنة",
-    "DELIVERED_TO_SENDER": "تم تسليم الشحنة",
+    "DELIVERED_TO_SENDER": "تم تسليم الشحنة للتاجر",
     "LAST_UPDATE": "آخر تحديث",
     "PROVIDER": "اسم التاجر",
+    "TICKET_CREATED": "تم إنشاء الشحنة",
+    "PARCEL_RECEIVED": "تم استلام الشحنة من التاجر",
+    "PARCEL_OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
+    "PARCEL_DELIVERED": "تم التسليم",
+    "SHIPMENT_DETAILS": "تفاصيل الشحنة",
+
+
+    "BRANCH": "الفرع",
+    "DATE": "التاريخ",
+    "TIME": "الوقت",
+    "DETAILS": "تفاصيل",
 
     "Saturday": "السبت",
     "Sunday": "الأحد",

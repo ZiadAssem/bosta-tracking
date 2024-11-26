@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         primary: "#e20713",
         secondary: "#1f2937",
-        green: "#0ADD08"
+        green: "#0ADD08",
       },
       fontFamily: {
         cairo: ['Cairo', 'sans-serif'],
