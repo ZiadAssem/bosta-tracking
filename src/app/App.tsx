@@ -24,10 +24,10 @@ function App() {
   const { shipment, status, error } = useSelector((state: RootState) => state.shipment);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    dispatch(fetchShipment("84043113"));
+  // useEffect(() => {
+  //   dispatch(fetchShipment("84043113"));
 
-  }, [dispatch])
+  // }, [dispatch])
   return (
     <LanguageContextProvider>
       <div className=' font-cairo bg-white mb-10 ' >
@@ -46,13 +46,14 @@ function App() {
           {status == 'succeeded' && shipment &&
             <div className=' gap-10'>
               <ShipmentHeading shipment={shipment} />
-              <div className='flex flex-row gap-5'>
+              <div className="flex flex-col lg:flex-row gap-5">
                 <ShipmentDetails />
-                <div> 
+                <div className=" flex-col flex-1">
                   <ShippingAddress />
-                  <ReportProblem/>
+                  <ReportProblem />
                 </div>
               </div>
+
             </div>
           }
 

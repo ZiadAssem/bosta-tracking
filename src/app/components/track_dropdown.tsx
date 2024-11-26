@@ -13,7 +13,7 @@ export const TrackDropDown = () => {
 
 
     return (
-        <div className={`absolute w-80 bg-white p-4 rounded-b-lg border-2 shadow-lg  ${language=='en'?'left-0 rounded-r-lg ':'right-0 rounded-l-lg ' } `}>
+        <div className={`absolute w-80 bg-white p-4 rounded-b-lg border-2 shadow-lg  ${language == 'en' ? 'left-0 rounded-r-lg ' : 'right-0 rounded-l-lg '} `}>
             <h3 className="font-cairo text-primary font-semibold text-lg">
                 {t("track shipment")}
             </h3>
@@ -21,10 +21,10 @@ export const TrackDropDown = () => {
                 color='white'
                 size={42}
                 onClick={() => {
-                     console.log(trackingNumber) 
+                    console.log(trackingNumber)
                     dispatch(fetchShipment(trackingNumber))
-                    }}
-                className={`bg-primary  absolute mt-2 ${language=='en'?'left-3 rounded-l-md':'right-3 rounded-r-md' } `}
+                }}
+                className={`bg-primary  absolute mt-2 ${language == 'en' ? 'left-3 rounded-l-md' : 'right-3 rounded-r-md'} `}
             />
             <input
                 type="text"
