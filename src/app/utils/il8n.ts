@@ -10,7 +10,7 @@ i18n
     .use(LanguageDetector)
     .use(HttpApi)
     .init({
-        fallbackLng: 'ar',
+        fallbackLng: 'en',
         detection: {
             order: [
                 'cookie',

@@ -41,7 +41,7 @@ const NavBar = () => {
           {isDropdownOpen && ( <TrackDropDown/>)}
         </div>
         <button className='font-cairo text-secondary font-semibold text-xl'>{t("login")} </button>
-        <button onClick={toggleLanguage} className='font-cairo font-semibold text-xl text-primary'>{t("language")} </button>
+        <button onClick={toggleLanguage} className='font-cairo font-bold text-xl text-primary'>{t("language")} </button>
       </div>
 
     </div>

@@ -9,7 +9,30 @@
     "welcome" : "أهلا بيك في",
     "first shipment": "تتبع شحنتك الأولي",
 
+    "PROMISED_DATE": "موعد التسليم خلال",
     "shipment number": "رقم الشحنة",
     "DELIVERED_TO_SENDER": "تم تسليم الشحنة",
-    "LAST_UPDATE": "آخر تحديث"
+    "LAST_UPDATE": "آخر تحديث",
+    "PROVIDER": "اسم التاجر",
+
+    "Saturday": "السبت",
+    "Sunday": "الأحد",
+    "Monday": "الإثنين",
+    "Tuesday": "الثلاثاء",
+    "Wednesday": "الأربعاء",
+    "Thursday": "الخميس",
+    "Friday": "الجمعة",
+
+
+    "Jan":"يناير",
+    "Feb":"فبراير",
+    "Mar":"مارس",
+    "Apr":"أبريل",
+    "May":"مايو",
+    "Jun":"يونيو",
+    "Jul":"يوليو",
+    "Aug":"أغسطس",
+    "Sep":"سبتمبر",
+    "Oct":"أكتوبر",
+    "Nov":"نوفمبر"
 }

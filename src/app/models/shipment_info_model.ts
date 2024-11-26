@@ -43,13 +43,13 @@ export const shipmentToPlainObject = (data: ShipmentInfo): any => {
         provider: data.provider,
         currentStatus: {
             state: data.currentStatus.state,
-            timestamp: data.currentStatus.timestamp.toISOString(),
+            timestamp: data.currentStatus.timestamp,
         },
         PromisedDate: data.promisedDate.toISOString(),
         trackingNumber: data.trackingNumber,
         transitEvents: data.transitEvents.map(event => ({
             state: event.state,
-            timestamp: event.timestamp.toDateString(),
+            timestamp: event.timestamp,
             hub: event.hub, // Optional field
             reason: event.reason, // Optional field
         })),

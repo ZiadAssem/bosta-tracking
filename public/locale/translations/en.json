@@ -9,9 +9,36 @@
     "welcome" : "Welcome to",
     "first shipment": " Track Your First Shipment",
 
+    "PROMISED_DATE": "Estimated Delivery Date",
     "shipment number": "Shipment Number",
     "DELIVERED_TO_SENDER": "Delivery Successful",
-    "LAST_UPDATE": "Last Update"
+    "LAST_UPDATE": "Last Update",
+    "PROVIDER": "Provider",
+
+
+
+
+    "Saturday": "Saturday",
+    "Sunday": "Sunday",
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+
+    "Jan":"January",
+    "Feb":"February",
+    "Mar":"March",
+    "Apr":"April",
+    "May":"May",
+    "Jun":"June",
+    "Jul":"July",
+    "Aug":"August",
+    "Sep":"September",
+    "Oct":"October",
+    "Nov":"November",
+    "Dec":"December"
+
     
 
 }
