@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ShipmentInfo } from './../models/shipment_info_model';
 import Divider from './divider';
 import { ShipmentProgressBar } from './shipment_progress_bar';
+import { CANCELLED_STATES, COMPLETED_STATES } from '../constants/shipment_state';
 
 
 interface ShipmentHeadingProps {
@@ -17,7 +18,9 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
 
                 <div className='flex flex-col gap-5 text-start' >
                     <p className='text-gray-600 font-semibold text-lg'>{t("shipment number")} {shipment.trackingNumber}</p>
-                    <p className=' font-bold text-xl '> {t(shipment.currentStatus.state)}</p>
+                    <p className={`
+                    ${COMPLETED_STATES.includes(shipment.currentStatus.state) ? 'text-green' : CANCELLED_STATES.includes(shipment.currentStatus.state ) ? 'text-primary' : 'text-yellow-300'}
+                        font-bold text-xl `}> {t(shipment.currentStatus.state)}</p>
                 </div>
 
                 <div className='flex flex-col gap-5 text-start' >
@@ -54,14 +57,14 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
             <ShipmentProgressBar />
 
             <div className="flex flex-row justify-between p-5">
-            <p className=' font-semibold text-lg'>{t("TICKET_CREATED")} </p>
-            <p className=' font-semibold text-lg'>{t("PACKAGE_RECEIVED")} </p>
-            <p className=' font-semibold text-lg'>{t("PACKAGE_OUT_FOR_DELIVERY")} </p>
-            <p className=' font-semibold text-lg'>{t("PACKAGE_DELIVERED")} </p>
-            
+                <p className=' font-semibold text-lg'>{t("TICKET_CREATED")} </p>
+                <p className=' font-semibold text-lg'>{t("PACKAGE_RECEIVED")} </p>
+                <p className=' font-semibold text-lg'>{t("PACKAGE_OUT_FOR_DELIVERY")} </p>
+                <p className=' font-semibold text-lg'>{t("PACKAGE_DELIVERED")} </p>
+
             </div>
 
-            
+
 
         </div>
     )

@@ -25,6 +25,8 @@
     "DELIVERY_FAILED": "فشل التسليم",
     "NOT_YET_SHIPPED": "الشحنة لم تتم بعد",
     "SHIPPING_ADDRESS": "عنوان التسليم",
+    "OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
+    "RECEIVED_DELIVERY_LOCATION": "تم استلام العنوان",
 
     "PROBLEM": "هل يوجد مشكلة في شحنتك؟!",
     "REPORT_PROBLEM": "إبلاغ عن مشكلة",

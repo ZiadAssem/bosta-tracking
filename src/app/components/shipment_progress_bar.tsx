@@ -1,6 +1,11 @@
 import { FaCheck } from "react-icons/fa6";
+import { LuPackageCheck } from "react-icons/lu";
+import { FaTruckFast } from "react-icons/fa6";
+import { FaSave } from "react-icons/fa";
+
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { CANCELLED_STATES, PENDING_STATES } from "../constants/shipment_state";
 
 const ShipmentStates = {
     TICKET_CREATED: "TICKET_CREATED",
@@ -34,14 +39,12 @@ export const ShipmentProgressBar = () => {
     // Determine the color based on state
     const getStepColor = (stepState: string) => {
         if (
-            (currentState === ShipmentStates.CANCELLED ||
-                currentState === ShipmentStates.DELIVERED_TO_SENDER) && stepState !== ShipmentStates.DELIVERED
+            (CANCELLED_STATES.includes(currentState!)) && stepState !== ShipmentStates.DELIVERED
         ) {
-            console.log('step state', stepState)
             return "bg-primary"; // Cancelled states
         }
         if (
-            currentState !== ShipmentStates.CANCELLED  && stepState !== ShipmentStates.DELIVERED
+            PENDING_STATES.includes(currentState!) 
         ){
             return 'bg-yellow-300'
         }

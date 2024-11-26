@@ -14,6 +14,7 @@
     "CANCELLED": "Shipment Cancelled",
     "PROMISED_DATE": "Estimated Delivery Date",
     "shipment number": "Shipment Number",
+    
     "DELIVERED_TO_SENDER": "Delivered To Sender",
     "LAST_UPDATE": "Last Update",
     "PROVIDER": "Provider",
@@ -26,6 +27,8 @@
     "DELIVERY_FAILED": "Delivery Failed",
     "NOT_YET_SHIPPED": "Not Yet Shipped",
     "SHIPPING_ADDRESS": "Shipping Address",
+    "OUT_FOR_DELIVERY": "Out For Delivery",
+    "RECEIVED_DELIVERY_LOCATION": "Received Delivery Location",
 
     "PROBLEM": "Is there a problem with your shipment?!",
     "REPORT_PROBLEM": "Report you problem",

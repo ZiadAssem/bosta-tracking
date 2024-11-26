@@ -25,7 +25,7 @@ function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    dispatch(fetchShipment("40106705"));
+    dispatch(fetchShipment("3468570"));
 
   }, [dispatch])
   return (
