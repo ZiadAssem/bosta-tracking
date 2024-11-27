@@ -27,6 +27,10 @@
     "SHIPPING_ADDRESS": "عنوان التسليم",
     "OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
     "RECEIVED_DELIVERY_LOCATION": "تم استلام العنوان",
+    "AVAILABLE_FOR_PICKUP": "متاح للإستلام",
+    "WAITING_FOR_CUSTOMER_ACTION": "في انتظار تحديد موعد التسليم",
+
+    "Cancellation - The customer refuses to give the shipment to the star": "العميل يرفض تسليم الشحنة لنقطة البداية",
 
     "PROBLEM": "هل يوجد مشكلة في شحنتك؟!",
     "REPORT_PROBLEM": "إبلاغ عن مشكلة",

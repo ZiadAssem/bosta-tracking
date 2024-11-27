@@ -31,8 +31,8 @@ export const mapShipmentInfo = (data: any): ShipmentInfo => {
         transitEvents: data.TransitEvents.map((event: any) => ({
             state: event.state,
             timestamp: new Date(event.timestamp),
-            hub: event.hub, // Optional field
-            reason: event.reason, // Optional field
+            hub: event.hub, 
+            reason: event.reason, 
         })),
         createDate: new Date(data.CreateDate),
     };

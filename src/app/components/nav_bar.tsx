@@ -32,8 +32,8 @@ const NavBar = () => {
       {/* Track Shipment Button with Dropdown */}
       <div
         className="relative"
-        onMouseEnter={() => setIsDropdownOpen(true)} // Open on hover
-        onMouseLeave={() => setIsDropdownOpen(false)} // Close on hover out
+        onMouseEnter={() => setIsDropdownOpen(true)} 
+        onMouseLeave={() => setIsDropdownOpen(false)} 
       >
         <button
           onClick={handleTrackShipmentClick}

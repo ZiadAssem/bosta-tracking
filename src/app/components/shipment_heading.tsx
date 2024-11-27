@@ -12,8 +12,8 @@ interface ShipmentHeadingProps {
 
 export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
     const context = useLanguageContext();
-    const {language, toggleLanguage, t } = context;   
-    const textAlign = language === "en" ? "text-left" : "text-right"; 
+    const { language, toggleLanguage, t } = context;
+    const textAlign = language === "en" ? "text-left" : "text-right";
     return (
         <div className="border rounded-md mt-10 p-5">
             {/* Shipment Information Section */}
@@ -24,10 +24,10 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
                     </p>
                     <p
                         className={`font-bold text-lg sm:text-xl ${COMPLETED_STATES.includes(shipment.currentStatus.state)
-                                ? "text-green"
-                                : CANCELLED_STATES.includes(shipment.currentStatus.state)
-                                    ? "text-primary"
-                                    : "text-yellow-300"
+                            ? "text-green"
+                            : CANCELLED_STATES.includes(shipment.currentStatus.state)
+                                ? "text-primary"
+                                : "text-yellow-300"
                             }`}
                     >
                         {t(shipment.currentStatus.state)}

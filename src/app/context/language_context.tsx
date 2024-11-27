@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import i18n from '../utils/il8n';
-import {  useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie';
 
 
@@ -17,7 +17,7 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType>({
     language: "en",
-    toggleLanguage: () => {},
+    toggleLanguage: () => { },
     t: (key: string) => key
 });
 export const useLanguageContext = () => useContext(LanguageContext)
@@ -33,7 +33,7 @@ export default function LanguageContextProvider({ children }: LanguageContextPro
     useEffect(() => {
         console.log('lng', lng);
         window.document.dir = language == 'en' ? 'rtl' : 'ltr';
-    }, [language,setLanguage,lng]);
+    }, [language, setLanguage, lng]);
 
     const { t } = useTranslation();
     return (

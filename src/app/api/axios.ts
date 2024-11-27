@@ -1,16 +1,16 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://tracking.bosta.co/shipments/', // Base API URL
-  timeout: 10000, // Request timeout in milliseconds
+  baseURL: 'https://tracking.bosta.co/shipments/', 
+  timeout: 10000, 
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Add a request interceptor (optional)
 axiosInstance.interceptors.request.use(
   (config) => {
+    // Can add headers here
     return config;
   },
   (error) => {

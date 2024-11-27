@@ -27,7 +27,7 @@ function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    dispatch(fetchShipment("84043113"));
+    dispatch(fetchShipment("3468570"));
 
   }, [dispatch])
   return (
@@ -49,7 +49,7 @@ function App() {
           {status == 'succeeded' && shipment &&
             <div className=' gap-10'>
               <ShipmentHeading shipment={shipment} />
-              <div className="flex flex-col lg:flex-row gap-5">
+              <div className="flex flex-col lg:flex-row gap-5 pb-10 ">
                 <ShipmentDetails />
                 <div className=" flex-col flex-1">
                   <ShippingAddress />

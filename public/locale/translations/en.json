@@ -29,6 +29,10 @@
     "SHIPPING_ADDRESS": "Shipping Address",
     "OUT_FOR_DELIVERY": "Out For Delivery",
     "RECEIVED_DELIVERY_LOCATION": "Received Delivery Location",
+    "AVAILABLE_FOR_PICKUP": "Available For Pickup",
+    "WAITING_FOR_CUSTOMER_ACTION": "Waiting For Customer Action",
+
+    "Cancellation - The customer refuses to give the shipment to the star": "The customer refuses to give the shipment to the starting point",
 
     "PROBLEM": "Is there a problem with your shipment?!",
     "REPORT_PROBLEM": "Report your problem",

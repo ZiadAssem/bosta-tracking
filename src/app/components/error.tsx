@@ -1,15 +1,13 @@
 import { useLanguageContext } from "../context/language_context";
 
 interface ErrorProps {
-    error: any; // The error object passed from Axios or other sources
+    error: any; 
 }
 
 export const ErrorComponent = ({ error }: ErrorProps) => {
     const { t } = useLanguageContext();
 
-    // Determine the error message
     let errorMessage;
-    console.log('your error is', error.response)
     if (error?.response) {
         // Error response from the server
         switch (error.response) {
@@ -23,10 +21,8 @@ export const ErrorComponent = ({ error }: ErrorProps) => {
                 errorMessage = t("something went wrong, please try again");
         }
     } else if (error?.request) {
-        // Request was made but no response received
         errorMessage = t("network error, please check your connection");
     } else {
-        // Other unknown errors
         errorMessage = t("CHECK_SHIPMENT_NUMBER");
     }
 

@@ -13,7 +13,6 @@ const initialState: ShipmentState = {
   status: 'idle',
 };
 
-// Async thunk to fetch shipment data
 export const fetchShipment = createAsyncThunk<ShipmentInfo, string>(
   'shipment/fetchShipment',
   async (trackingNumber) => {
@@ -22,7 +21,6 @@ export const fetchShipment = createAsyncThunk<ShipmentInfo, string>(
   }
 );
 
-// Slice
 const shipmentSlice = createSlice({
   name: 'shipment',
   initialState,
