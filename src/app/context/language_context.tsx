@@ -24,16 +24,18 @@ export const useLanguageContext = () => useContext(LanguageContext)
 
 
 export default function LanguageContextProvider({ children }: LanguageContextProviderProps) {
-    const [language, setLanguage] = useState<Language>("en");
+    const lng = cookies.get('i18next') || 'en';
+    const [language, setLanguage] = useState<Language>(lng as Language);
     const toggleLanguage = () => {
         setLanguage(language === "en" ? "ar" : "en");
-        i18n.changeLanguage(language);
+        // i18n.changeLanguage(language);
     }
-    const lng = cookies.get('i18next') || 'en';
+   
     useEffect(() => {
-        console.log('lng', lng);
-        window.document.dir = language == 'en' ? 'rtl' : 'ltr';
-    }, [language, setLanguage, lng]);
+        console.log('language', language);
+        window.document.dir = language == 'en' ? 'ltr' : 'rtl';
+        i18n.changeLanguage(language);
+    }, [language]);
 
     const { t } = useTranslation();
     return (
