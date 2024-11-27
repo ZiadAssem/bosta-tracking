@@ -19,7 +19,7 @@ export const ProgressBar = () => {
     const step_3 = isCompleted;
 
     return (
-        <div className="flex items-center justify-between w-full mt-5 p-4 sm:p-1 sm:flex-row">
+        <div className="flex items-center justify-between w-full mt-5 p-1 md:p-4  sm:flex-row">
             <div
                 className={`relative z-10 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-white ${step_1} ${isCancelled}`}
             >

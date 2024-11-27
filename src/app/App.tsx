@@ -36,7 +36,7 @@ function App() {
         <NavBar />
         <Divider />
         
-        <div className='px-20 h-screen  flex-1'>
+        <div className='px-5 md:px-20 h-screen flex-1'>
           {status == 'idle' &&
             <Welcome />
           }

@@ -52,7 +52,7 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
   );
 
   return (
-    <div className="border rounded-md mt-10 p-5">
+    <div className="border rounded-md mt-10 p-3 md:p-5">
       {/* Shipment Information Section */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:mb-5">
       <div className="col-span-2 lg:col-span-1">
@@ -86,14 +86,14 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
       {/* ProgressBar Section */}
       <ProgressBar />
 
-      <div className="flex flex-row justify-between p-5">
+      <div className="flex flex-row  md:justify-between p-1 md:p-5">
         {[
           "TICKET_CREATED",
           "PACKAGE_RECEIVED",
           "PACKAGE_OUT_FOR_DELIVERY",
           "PACKAGE_DELIVERED",
         ].map((key) => (
-          <p key={key} className="font-semibold text-lg">
+          <p key={key} className="font-semibold text-xs md:text-lg">
             {t(key)}
           </p>
         ))}
