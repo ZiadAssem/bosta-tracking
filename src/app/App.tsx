@@ -33,7 +33,7 @@ function App() {
       <div className=' font-cairo bg-white mb-10 ' >
         <NavBar />
         <Divider />
-        <div className='px-20'>
+        <div className='px-20 h-screen  flex-1'>
           {status == 'idle' &&
             <Welcome />
           }
