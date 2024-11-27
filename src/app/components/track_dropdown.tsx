@@ -26,12 +26,12 @@ export const TrackDropDown = ({ isOpen }: { isOpen: boolean }) => {
                     console.log(trackingNumber);
                     dispatch(fetchShipment(trackingNumber));
                 }}
-                className={`bg-primary absolute mt-2 ${language === "en" ? "left-6 rounded-l-md" : "right-3 rounded-r-md"
+                className={`bg-primary absolute mt-2 ${language === "ar" ? "left-6 rounded-l-md" : "right-6 rounded-r-md"
                     }`}
             />
             <input
                 type="text"
-                placeholder={t("Enter your tracking number")}
+                placeholder={t("ENTER_YOUR_TRACKING_NUMBER")}
                 onChange={(e) => setTrackingNumber(e.target.value)}
                 className="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />

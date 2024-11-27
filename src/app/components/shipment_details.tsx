@@ -34,17 +34,17 @@ export const ShipmentDetails = () => {
                 {shipment?.transitEvents?.map((event, index) => (
                     <div key={index} className="py-5 px-8 flex flex-row">
                         <div className="w-[20%]">
-                            <p className={`text-gray-600 font-semibold text-lg flex-1 p-1 ${textAlignment}`}>
+                            <p className={`text-gray-600 font-semibold lg:text-lg flex-1 p-1 ${textAlignment}`}>
                                 {event?.hub || ' '}
                             </p>
                         </div>
                         <div className="w-[20%]">
-                            <p className={`text-gray-600 font-semibold text-lg flex-1 p-1 ${textAlignment}`}>
+                            <p className={`text-gray-600 font-semibold lg:text-lg flex-1 p-1 ${textAlignment}`}>
                                 {new Date(event?.timestamp!).toLocaleDateString('en-GB')}
                             </p>
                         </div>
                         <div className="w-[20%]">
-                            <p className={`text-gray-600 font-semibold text-lg flex-1 p-1 ${textAlignment}`}>
+                            <p className={`text-gray-600 font-semibold lg:text-lg flex-1 p-1 ${textAlignment}`}>
                                 {new Date(event?.timestamp!).toLocaleTimeString('en-us', {
                                     hour: '2-digit',
                                     minute: '2-digit',
@@ -52,7 +52,7 @@ export const ShipmentDetails = () => {
                                 }).replace(' ', '')}
                             </p>
                         </div>
-                        <p className={`text-gray-600 font-semibold text-lg flex-1 p-1 ${textAlignment}`}>
+                        <p className={`text-gray-600 font-semibold lg:text-lg flex-1 p-1 ${textAlignment}`}>
                             {t(event?.state!)}
                             <br />
                             <span className={`font-semibold ${COMPLETED_STATES.includes(shipment.currentStatus.state)

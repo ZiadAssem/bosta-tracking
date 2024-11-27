@@ -14,6 +14,7 @@
     "CANCELLED": "Shipment Cancelled",
     "PROMISED_DATE": "Estimated Delivery Date",
     "shipment number": "Shipment Number",
+    "ENTER_YOUR_TRACKING_NUMBER": "Enter your tracking number",
     
     "DELIVERED_TO_SENDER": "Delivered To Sender",
     "LAST_UPDATE": "Last Update",

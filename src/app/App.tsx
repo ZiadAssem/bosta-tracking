@@ -26,10 +26,10 @@ function App() {
   const { shipment, status, error } = useSelector((state: RootState) => state.shipment);
   const { t } = useTranslation();
 
-  // useEffect(() => {
-  //   dispatch(fetchShipment("3468570"));
+  useEffect(() => {
+    dispatch(fetchShipment("84043113"));
 
-  // }, [dispatch])
+  }, [dispatch])
   return (
     <LanguageContextProvider>
       <div className=' font-cairo bg-white mb-10 ' >

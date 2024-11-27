@@ -19,13 +19,14 @@ export const ProgressBar = () => {
     const step_3 = isCompleted;
 
     return (
-        <div className="flex items-center justify-between w-full mt-5 p-3 sm:p-5">
+        <div className="flex items-center justify-between w-full mt-5 p-4 sm:p-1 sm:flex-row">
             <div
                 className={`relative z-10 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-white ${step_1} ${isCancelled}`}
             >
                 <FaCheck />
             </div>
-            <div className={`h-1 sm:h-2 flex-grow ${step_1} ${isCancelled}`} role="separator"></div>
+            
+            <div className={`h-1 sm:h-2  flex-grow ${step_1} ${isCancelled}`} role="separator"></div>
             <div
                 className={`relative z-10 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-white ${step_1} ${isCancelled}`}
             >

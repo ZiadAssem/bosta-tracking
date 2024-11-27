@@ -13,6 +13,8 @@
     "CANCELLED": "تم إلغاء الشحنة",
     "PROMISED_DATE": "موعد التسليم خلال",
     "shipment number": "رقم الشحنة",
+    "ENTER_YOUR_TRACKING_NUMBER": "أدخل رقم الشحنة",
+
     "DELIVERED_TO_SENDER": "تم تسليم الشحنة للتاجر",
     "LAST_UPDATE": "آخر تحديث",
     "PROVIDER": "اسم التاجر",
