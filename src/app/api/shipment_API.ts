@@ -10,6 +10,7 @@ export const fetchShipmentTracking = async (trackingNumber: string): Promise<Shi
       const model = shipmentToPlainObject(mapShipmentInfo(response));
       return model; 
     } catch (error) {
-      throw new Error(`Failed to fetch shipment data: ${error}`);
+      
+      throw error;
     }
   };

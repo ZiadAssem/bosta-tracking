@@ -29,19 +29,31 @@ const NavBar = () => {
 
   const renderActions = () => (
     <>
-      <div className="relative">
+      {/* Track Shipment Button with Dropdown */}
+      <div
+        className="relative"
+        onMouseEnter={() => setIsDropdownOpen(true)} // Open on hover
+        onMouseLeave={() => setIsDropdownOpen(false)} // Close on hover out
+      >
         <button
           onClick={handleTrackShipmentClick}
-          className={`font-cairo text-secondary font-semibold text-lg lg:text-xl p-4 ${isDropdownOpen ? 'rounded-t-md border-t border-l border-r border-gray-300' : ''
-            }`}
+          className={` text-secondary font-semibold text-lg lg:text-xl p-4 ${
+            isDropdownOpen ? "rounded-t-md border-t border-l border-r border-gray-300" : ""
+          }`}
         >
           {t("track shipment")}
         </button>
-        {isDropdownOpen && <TrackDropDown />}
+  
+        {/* Track Dropdown */}
+        <TrackDropDown isOpen={isDropdownOpen} />
       </div>
+  
+      {/* Login Button */}
       <button className="font-cairo text-secondary font-semibold text-lg lg:text-xl p-4">
         {t("login")}
       </button>
+  
+      {/* Language Toggle */}
       <button
         onClick={toggleLanguage}
         className="font-cairo font-bold text-lg lg:text-xl text-primary p-4"
@@ -50,6 +62,7 @@ const NavBar = () => {
       </button>
     </>
   );
+  
 
   return (
     <div className="px-5 sm:px-10 lg:px-20 flex flex-row justify-between items-center py-4">
@@ -82,7 +95,7 @@ const NavBar = () => {
         {/* Action Buttons */}
         <div className="flex flex-col lg:flex-row gap-4 justify-center">{renderActions()}</div>
       </div>
-      </div>
+    </div>
   );
 };
 

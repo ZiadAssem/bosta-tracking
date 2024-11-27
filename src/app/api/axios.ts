@@ -11,7 +11,6 @@ const axiosInstance = axios.create({
 // Add a request interceptor (optional)
 axiosInstance.interceptors.request.use(
   (config) => {
-    // Perform actions before the request is sent, such as adding tokens
     return config;
   },
   (error) => {

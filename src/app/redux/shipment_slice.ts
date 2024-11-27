@@ -41,7 +41,8 @@ const shipmentSlice = createSlice({
       .addCase(fetchShipment.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message || 'Something went wrong';
-        console.log('rejected')
+        
+        console.log('rejected',action.error.code)
       });
   },
 });

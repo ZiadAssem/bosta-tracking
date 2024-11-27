@@ -32,6 +32,9 @@
 
     "PROBLEM": "Is there a problem with your shipment?!",
     "REPORT_PROBLEM": "Report your problem",
+
+    "ERROR": "Error",
+    "CHECK_SHIPMENT_NUMBER": "Please check the shipment number and try again",
     
 
 

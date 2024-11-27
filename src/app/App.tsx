@@ -13,6 +13,8 @@ import { ShipmentHeading } from './components/shipment_heading';
 import { ShipmentDetails } from './components/shipment_details';
 import { ShippingAddress } from './components/shipping_address';
 import { ReportProblem } from './components/report_problem';
+import { Loading } from './components/loading';
+import { ErrorComponent } from './components/error';
 
 
 
@@ -24,24 +26,25 @@ function App() {
   const { shipment, status, error } = useSelector((state: RootState) => state.shipment);
   const { t } = useTranslation();
 
-  // useEffect(() => {
-  //   dispatch(fetchShipment("84043113"));
+  useEffect(() => {
+    dispatch(fetchShipment("84043113"));
 
-  // }, [dispatch])
+  }, [dispatch])
   return (
     <LanguageContextProvider>
       <div className=' font-cairo bg-white mb-10 ' >
         <NavBar />
         <Divider />
+        
         <div className='px-20 h-screen  flex-1'>
           {status == 'idle' &&
             <Welcome />
           }
           {status == 'loading' &&
-            <p>Loading...</p>
+            <Loading />
           }
           {status == 'failed' &&
-            <p>{error}</p>
+            <ErrorComponent error={error} />
           }
           {status == 'succeeded' && shipment &&
             <div className=' gap-10'>
