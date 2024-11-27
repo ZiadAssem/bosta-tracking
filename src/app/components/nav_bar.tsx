@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import logo from './../../assets/images/logo.svg';
 import { useLanguageContext } from '../context/language_context';
-import { CiSearch } from "react-icons/ci";
 import { TrackDropDown } from './track_dropdown';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 

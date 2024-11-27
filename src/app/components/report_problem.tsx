@@ -9,7 +9,7 @@ export const ReportProblem = () => {
             <img src={question} alt="question" className="h-20 sm:h-28 object-contain" />
             <div className="flex flex-col items-center sm:items-start gap-2">
                 <p className="font-extrabold">{t('PROBLEM')}</p>
-                <button className="bg-primary text-white font-bold py-2 px-4 rounded-xl">
+                <button className="bg-primary text-white font-bold py-2 px-4 rounded-xl w-full">
                     {t('REPORT_PROBLEM')}
                 </button>
             </div>
