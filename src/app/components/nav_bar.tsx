@@ -86,7 +86,7 @@ const NavBar = () => {
       {/* Navigation Links */}
       <div
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'
-          } flex-col lg:flex-row lg:flex gap-8 lg:items-center items-center absolute lg:relative top-16 left-0 lg:top-auto lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent z-10 lg:z-auto`}
+          }  rounded-2xl ${language=='ar'? 'left-4' : 'right-4'}   shadow-lg lg:shadow-none w-[60%]  mb-10 lg:mb-0 flex-col lg:flex-row lg:flex gap-8 lg:items-center items-center absolute lg:relative top-16  lg:top-auto lg:left-auto lg:w-auto bg-white lg:bg-transparent z-20 lg:z-auto`}
       >
         {/* Navigation Links */}
         <div className="flex flex-col lg:flex-row gap-8">{renderNavLinks()}</div>
