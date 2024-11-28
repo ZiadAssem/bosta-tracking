@@ -86,7 +86,7 @@ export const ShipmentHeading = ({ shipment }: ShipmentHeadingProps) => {
       {/* ProgressBar Section */}
       <ProgressBar />
 
-      <div className="flex flex-row  md:justify-between p-1 md:p-5">
+      <div className="flex flex-row  justify-between p-1 md:p-5">
         {[
           "TICKET_CREATED",
           "PACKAGE_RECEIVED",
